@@ -1,4 +1,5 @@
-## Interface: 90002
+## Interface: 20504
+## X-Interface: 20504
 ## Title: + |TInterface\Addons\Sorted\Textures\Title:24:96|t
 ## Notes: Modern bag interface with efficient searching and filters.
 ## Notes-frFR: Interface de Sac moderne avec un système de recherche et de filtre efficace.
