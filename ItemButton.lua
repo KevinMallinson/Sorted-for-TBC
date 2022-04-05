@@ -53,8 +53,7 @@ function SortedItemButton_Update(self)
             if S.IsCurrentPlayerSelected() and data.effectiveILvl and data.effectiveILvl > Sorted_maxILvl then 
                 Sorted_maxILvl = data.effectiveILvl 
             end
-            
-            if self:IsNew() and S.IsCurrentPlayerSelected() then
+            if Sorted_GetSetting("newItemHighlight") == 2 and self:IsNew() and S.IsCurrentPlayerSelected() then
                 if self:IsNew() > 0 then
                     self.newItemHighlight:SetAlpha(1)
                     self.newItemHighlight.pulse:Play()

@@ -368,6 +368,7 @@ CONFIG_BEHAVIOR_RESET_WINDOW	Reset Window on Close	Reset Window on Close	Réinit
 CONFIG_BEHAVIOR_COMBINE_STACKS	Combine Stacks	Combine Stacks	Combiner les Piles	Stapel kombinieren	Combina pile	갯수 합치기	合并堆叠	合併堆疊	Объед. пачки	Combinar montones	Combinar montones	Combinar ítens empilháveis
 CONFIG_BEHAVIOR_NEW_ITEMS_HEADER	New Items	New Items	Nouveaux objets	Neue Gegenstände	Nuovi oggetti	새 아이템	新物品	新物品		Nuevos Objetos		Novo Item
 CONFIG_BEHAVIOR_NEW_INDICATORS	Category Indicators	Category Indicators	Indicateur de Catégorie	Kategorieindikatoren	Indicatori di categoria	분류에 표시	类别指标	類別指標		Indicadores de Cartegoría		Indicador de Categoria
+CONFIG_BEHAVIOR_HIGHLIGHT	Highlight	Highlight	Highlight	Highlight	Highlight	Highlight Highlight	Highlight	Highlight		Highlight		Highlight
 CONFIG_BEHAVIOR_PIN_NEW	Pin to Top	Pin to Top	Epingler en haut	Anpinnen	Metti in primo piano	상단에 고정	置顶	置頂		Fijar arriba		Manter no Topo
 CONFIG_BEHAVIOR_TOOLTIP_HEADER	Tooltips	Tooltips	Infobulle	Tooltips	Tooltips	툴팁	提示资讯	提示資訊				Tooltip
 CONFIG_BEHAVIOR_TOOLTIP_INFO	Info on Item Tooltips	Info on Item Tooltips	Informations sur les \n info-bulles des articles	Gegenstands Tooltip	Informazioni sui tooltip degli oggetti	툴팁에 정보 표시	物品提示统计资讯	物品提示統計資訊		Info en el globo de ayuda		Informação no Tooltip

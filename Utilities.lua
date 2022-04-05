@@ -47,6 +47,7 @@ Sorted_defaultSettings = {   -- Defaults
     ["favoritesOnTop"] = 2,
     ["newOnTop"] = 2,
     ["newItemIndicators"] = 2,
+    ["newItemHighlight"] = 2,
     ["combineStacks"] = 1,
     ["fontOutline"] = 0,
     ["categoriesWidth"] = 120,

@@ -471,7 +471,7 @@
 
     <!-- Main config frame -->
     <Frame name="SortedConfigFrame" parent="UIParent" enableMouse="true" movable="true" clampedToScreen="true" hidden="true" frameLevel="10" frameStrata="DIALOG">
-        <Size x="640" y="520"/>
+        <Size x="640" y="561"/>
         <Anchors>
             <Anchor point="CENTER"/>
         </Anchors>
@@ -495,7 +495,7 @@
                         if self.animation == "Show" then
                             local smooth = math.sin(self.animElapsed * math.pi / 2)
                             self:SetAlpha(smooth)
-                            self:SetSize(640 * smooth, 520 * smooth)
+                            self:SetSize(640 * smooth, 561 * smooth)
                             self.dropShadowFrame:Show()
                         elseif self.animation == "Hide" then
                             local smooth = math.sin((1 - self.animElapsed) * math.pi / 2)
@@ -1561,7 +1561,7 @@
                                 </Frames>
                             </Frame>
                             <Frame name="$parentBox2" inherits="SortedConfigBoxTemplate">
-                                <Size x="280" y="90"/>
+                                <Size x="280" y="120"/>
                                 <Anchors>
                                     <Anchor point="TOPLEFT" relativeTo="$parentBox1" relativePoint="BOTTOMLEFT" y="-8"/>
                                 </Anchors>
@@ -1649,10 +1649,45 @@
                                             </OnShow>
                                         </Scripts>
                                     </CheckButton>
+                                    <CheckButton name="SortedConfigNewHighlight" inherits="SortedCheckButtonTemplate">
+                                        <Anchors>
+                                            <Anchor point="TOP" relativeTo="SortedConfigNewIndicators" relativePoint="BOTTOM" y="-4"/>
+                                            <Anchor point="LEFT" x="16"/>
+                                        </Anchors>
+                                        <Scripts>
+                                            <OnLoad>
+                                                local function OnClick(self, button)
+                                                    if self:GetChecked() then
+                                                        Sorted_SetSetting("newItemHighlight", 2)
+                                                    else
+                                                        Sorted_SetSetting("newItemHighlight", 1)
+                                                    end
+                                                    Sorted_UpdateNewItemsPerCategory()
+                                                end
+
+                                                self:RegisterForClicks("LeftButtonDown")
+                                                self:HookScript("OnClick", OnClick)
+                                                self.text:SetText(Sorted.Localize("CONFIG_BEHAVIOR_HIGHLIGHT"))
+                                                self.text:SetFontObject(Sorted13Font)
+                                                self.text:SetTextColor(1,1,1)
+
+                                                self.text:ClearAllPoints()
+                                                self.text:SetPoint("LEFT", 28, 0)
+                                                self.clickable:SetPoint("RIGHT", self:GetParent(), "RIGHT", -16, 0)
+                                            </OnLoad>
+                                            <OnShow>
+                                                if Sorted_GetSetting("newItemHighlight") == 2 then
+                                                    self:SetChecked(true)
+                                                else
+                                                    self:SetChecked(false)
+                                                end
+                                            </OnShow>
+                                        </Scripts>
+                                    </CheckButton>
                                 </Frames>
                             </Frame>
                             <Frame name="$parentBox3" inherits="SortedConfigBoxTemplate">
-                                <Size x="280" y="108"/>
+                                <Size x="280" y="118"/>
                                 <Anchors>
                                     <Anchor point="TOPLEFT" relativeTo="$parentBox2" relativePoint="BOTTOMLEFT" y="-8"/>
                                 </Anchors>
